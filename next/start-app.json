@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "websocket",
+      "script": "npm",
+      "args": "start"
+    }
+  ]
+}

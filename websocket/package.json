@@ -1,0 +1,16 @@
+{
+	"name": "websocket",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "node index.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"dependencies": {
+		"node-fetch": "^3.3.1",
+		"ws": "^8.13.0"
+	}
+}

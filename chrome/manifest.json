@@ -1,0 +1,39 @@
+{
+	"manifest_version": 3,
+	"name": "MRC",
+	"version": "0.0.0.5",
+	"description": "Music Remote Control",
+	"icons": {
+		"128": "favicon.png"
+	},
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"scripts/next.js",
+				"scripts/prev.js",
+				"scripts/togglePause.js",
+				"scripts/toggleShuffle.js",
+				"scripts/toggleRepeat.js",
+				"scripts/toggleLike.js",
+				"scripts/downVolume.js",
+				"scripts/upVolume.js",
+				"scripts/getCurrentTrack.js",
+				"scripts/eventListenner.js"
+			],
+			"matches": ["<all_urls>"]
+		}
+	],
+	"content_scripts": [
+		{
+			"js": ["scripts/content.js"],
+			"matches": ["*://music.yandex.ru/*", "*://radio.yandex.ru/*"]
+		}
+	],
+	"action": {
+		"default_popup": "./popup/popup.html",
+		"default_icon": "./favicon.png"
+	},
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src 'self'"
+	}
+}

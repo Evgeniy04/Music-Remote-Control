@@ -1,0 +1,134 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	padding: 20px;
+	width: 100vw;
+	height: 100vh;
+	min-height: 705px;
+	min-width: 190px;
+}
+
+.main__panel {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.info {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.text__info {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+}
+.current__info {
+	flex: 1;
+	margin-bottom: 20px;
+}
+.title {
+	margin-top: 10px;
+	font-size: 32px;
+	font-weight: bold;
+}
+.explicit {
+	vertical-align: middle;
+	font-size: 25px;
+	margin: 0;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	padding: 3px;
+	color: #584e5a;
+	border: 1px solid #584e5a;
+	border-radius: 25%;
+}
+.authors {
+	font-size: 16px;
+}
+
+.control {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-height: 150px;
+	border-radius: 40px;
+	background-color: #ffffff;
+}
+
+.controls__btn__container {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	align-items: center;
+	height: 40px;
+	width: 100%;
+}
+.controls__btn {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+}
+.controls__btn_icons {
+	font-size: 30px;
+	color: #584e5a;
+	margin: 20px;
+}
+
+.progress__bar {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 90%;
+}
+.time {
+	text-align: end;
+	margin-top: 10px;
+}
+
+.volume {
+	margin: 0;
+	margin-top: 10px;
+}
+
+.volume:nth-child(1) {
+	margin-right: 10px;
+}
+
+@media screen and (min-height: 1000px) {
+	.control {
+		justify-content: flex-start;
+	}
+}
+@media screen and (max-width: 430px) {
+	.cover {
+		width: 80vw;
+		height: 80vw;
+	}
+	.controls__btn_icons {
+		margin: 10px;
+	}
+}
+@media screen and (max-width: 330px) {
+	.cover {
+		width: 80vw;
+		height: 80vw;
+	}
+	.controls__btn_icons {
+		font-size: 20px;
+		margin: 5px;
+	}
+}
