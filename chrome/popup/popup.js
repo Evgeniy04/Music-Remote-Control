@@ -1,5 +1,4 @@
 // Получаем ссылку
-
 const id = window.sessionStorage.getItem("id");
 if (id) {
 	main(id);
@@ -18,25 +17,24 @@ if (id) {
 }
 
 const main = (id) => {
-	link = document.querySelector("a");
-	link.href = `https://avradev.ru?player_id=${id}`;
+	// Добавляем элемент img в контейнер
+	var container = document.getElementById("container");
+	container.href = `https://avradev.ru?player_id=${id}`;
 
 	// Добавляем обработчик события клика
-	link.addEventListener("click", function (event) {
+	container.addEventListener("click", function (event) {
 		// Отменяем действие по умолчанию (открытие ссылки в текущей вкладке)
 		event.preventDefault();
 		// Получаем адрес ссылки
-		let url = link.href;
+		let url = container.href;
 		// Открываем новую вкладку с этим адресом
 		chrome.tabs.create({ url: url });
 	});
 
 	// Создаем элемент img для отображения QR Code
 	var img = document.createElement("img");
-	// Используем сервис Google Charts для генерации QR Code
-	img.src =
-		"https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=" + link.href;
-	// Добавляем элемент img в контейнер
-	var container = document.getElementById("container");
+	// Используем стороннее API для генерации QR Code
+	img.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + container.href;
+
 	container.appendChild(img);
 };
