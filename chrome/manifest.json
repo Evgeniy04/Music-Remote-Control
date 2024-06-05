@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "MRC",
-	"version": "0.0.0.5",
+	"version": "0.0.0.6",
 	"description": "Music Remote Control",
 	"icons": {
 		"128": "favicon.png"
